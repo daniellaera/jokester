@@ -1,12 +1,13 @@
-# fly.toml file generated for jokester on 2022-01-09T15:52:45+01:00
+# fly.toml file generated for holy-dew-2367 on 2022-01-09T16:15:23+01:00
 
-app = "jokester"
+app = "holy-dew-2367"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
 [env]
+  PORT = "8080"
 
 [experimental]
   allowed_public_ports = []
