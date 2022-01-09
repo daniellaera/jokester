@@ -36,6 +36,10 @@ If you've followed the setup instructions already, all you need to do is run thi
 npm run deploy
 ```
 
+## Prisma migrate Heroku
+
+`npx prisma migrate resolve --applied "20220109091633_first" --preview-feature`
+
 You can run `flyctl info` to get the url and ip address of your server.
 
 Check out the [fly docs](https://fly.io/docs/getting-started/node/) for more information.
