@@ -39,6 +39,8 @@ npm run deploy
 ## Prisma migrate Heroku
 
 `npx prisma migrate resolve --applied "20220109091633_first" --preview-feature`
+then
+`prisma db push`
 
 You can run `flyctl info` to get the url and ip address of your server.
 
