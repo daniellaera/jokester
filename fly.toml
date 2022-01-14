@@ -1,6 +1,6 @@
-# fly.toml file generated for holy-dew-2367 on 2022-01-09T16:15:23+01:00
+# fly.toml file generated for jokester-app on 2022-01-14T17:24:20+01:00
 
-app = "holy-dew-2367"
+app = "jokester-app"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
