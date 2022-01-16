@@ -21,7 +21,7 @@ export function Document({
             <body className="h-full">
                 {children}
                 <ScrollRestoration />
-                <Scripts />
+                {shouldHydrate && <Scripts />}
                 {process.env.NODE_ENV === "development" && <LiveReload />}
             </body>
         </html>
