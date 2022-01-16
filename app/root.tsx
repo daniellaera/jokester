@@ -14,8 +14,9 @@ import globalLargeStylesUrl from "./styles/global-large.css";
 
 import { useNProgress } from "./hooks/use-nprogress";
 import nProgressUrl from "nprogress/nprogress.css";
+import { Document } from "./components/document";
 
-export const links: LinksFunction = () => {
+export let links: LinksFunction = () => {
   return [
     {
       rel: "stylesheet",
@@ -41,6 +42,8 @@ export const links: LinksFunction = () => {
 export const meta: MetaFunction = () => {
   const description = `Learn Remix and laugh at the same time!`;
   return {
+    robots: "noindex",
+    title: "Jokes App",
     description,
     keywords: "Remix,jokes",
     "twitter:image": "https://remix-jokes.lol/social.png",
@@ -52,31 +55,31 @@ export const meta: MetaFunction = () => {
   };
 };
 
-function Document({
-  children,
-  title = `Remix: So great, it's funny!`
-}: {
-  children: React.ReactNode;
-  title?: string;
-}) {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <Meta />
-        <title>{title}</title>
-        <Links />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-        {process.env.NODE_ENV === "development" ? (
-          <LiveReload />
-        ) : null}
-      </body>
-    </html>
-  );
-}
+// function Document({
+//   children,
+//   title = `Remix: So great, it's funny!`
+// }: {
+//   children: React.ReactNode;
+//   title?: string;
+// }) {
+//   return (
+//     <html lang="en">
+//       <head>
+//         <meta charSet="utf-8" />
+//         <Meta />
+//         <title>{title}</title>
+//         <Links />
+//       </head>
+//       <body>
+//         {children}
+//         <Scripts />
+//         {process.env.NODE_ENV === "development" ? (
+//           <LiveReload />
+//         ) : null}
+//       </body>
+//     </html>
+//   );
+// }
 
 export default function App() {
 
