@@ -1,11 +1,7 @@
 import type { LinksFunction, MetaFunction } from "remix";
 import {
-  Links,
-  LiveReload,
   Outlet,
   useCatch,
-  Meta,
-  Scripts
 } from "remix";
 
 import globalStylesUrl from "./styles/global.css";
@@ -54,32 +50,6 @@ export const meta: MetaFunction = () => {
     "twitter:description": description
   };
 };
-
-// function Document({
-//   children,
-//   title = `Remix: So great, it's funny!`
-// }: {
-//   children: React.ReactNode;
-//   title?: string;
-// }) {
-//   return (
-//     <html lang="en">
-//       <head>
-//         <meta charSet="utf-8" />
-//         <Meta />
-//         <title>{title}</title>
-//         <Links />
-//       </head>
-//       <body>
-//         {children}
-//         <Scripts />
-//         {process.env.NODE_ENV === "development" ? (
-//           <LiveReload />
-//         ) : null}
-//       </body>
-//     </html>
-//   );
-// }
 
 export default function App() {
 
