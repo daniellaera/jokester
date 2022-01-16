@@ -12,6 +12,9 @@ import globalStylesUrl from "./styles/global.css";
 import globalMediumStylesUrl from "./styles/global-medium.css";
 import globalLargeStylesUrl from "./styles/global-large.css";
 
+import { useNProgress } from "./hooks/use-nprogress";
+import nProgressUrl from "nprogress/nprogress.css";
+
 export const links: LinksFunction = () => {
   return [
     {
@@ -27,6 +30,10 @@ export const links: LinksFunction = () => {
       rel: "stylesheet",
       href: globalLargeStylesUrl,
       media: "screen and (min-width: 1024px)"
+    },
+    {
+      rel: "stylesheet",
+      href: nProgressUrl
     }
   ];
 };
@@ -72,6 +79,9 @@ function Document({
 }
 
 export default function App() {
+
+  useNProgress();
+
   return (
     <Document>
       <Outlet />
